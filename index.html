@@ -31,13 +31,27 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
+							<h2>Introduction</h2>
 						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
+				<p> <font face="MathJax_SansSerif" size="2em"> MeqTrees</font>, as
+					you might have heard from the previous lectures, is simply a software 
+					tool that allows us to:</p>
+<ul>
+ <li> Generate visibilities through simulations and
+ <li> calibrate both the simulated and real astronomical data.
+</ul>
+<p>
+<font face="MathJax_SansSerif" size="2em"> MeqTrees</font> uses the Radio Interferometer Measurement Equation (RIME)  or in short, the Measurement Equation to try and predict visibilities by modelling what we think the observed sky looks like and then corrupting the model with various propagation effects. Such effects include 
+the bandpass, receiver complex gains, polarisation leakage, primary beam, parallactic angle (for alt-az mount such as the JVLA, KAT7, MeerKAT) and atmospheric phases. The Measurement Equation is very flexible in a such a way that it allows the different effects to be representated as separate terms, thus, making it possible to solve for the individual effects independently. </p>
+Corruption effects are generally grouped into direction independent (DI) and direction dependent (DD).
+						The DI effects occur at the antennas and are
+						referred to as <em>uv-</em>plane effects,
+						and the DD effects occur close to an astronomical 
+						object and hence, referred to as the image-plane effects.
+<p>
+Calibration methods developed to correct for DI effects are referred to as 2GC methods, and those that incorporate the correction of DD effects are 3GC methods. For this practical, we going to focus only on 2GC methods and the next practical will be on 3GC methods. The 2GC methods assume that all the effects are DI, and any effect which is DD such as the 
+	primary beam is constant in time and identical across all receivers.</p>						
+						
 					</section>
 
 				<!-- Two -->
