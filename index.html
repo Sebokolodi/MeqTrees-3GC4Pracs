@@ -70,8 +70,7 @@ I suppose by now all of us should have access to elwood. Login to elwood, and go
     <li> The sky model <font color="red"> summs_field_kat7.lsm.html </font>. This model is in <font face="MathJax_SansSerif" size="2em"> Tigger </font> format and it contains sources drawn
     from SUMSS covering approximately the field of view of the KAT-7 instrument. The survey 
 	    from which they are drawn was conducted at 843 MHz so the sources have had their
-	    fluxes extrapolated to what they would be at 1445 MHz assuming a spectral index of 0.7,
-	    recall   $\large{S\sim \nu^{\alpha}}$.  
+	    fluxes extrapolated to what they would be at 1445 MHz assuming a spectral index of 0.7.
     
     <li> The <font color="red"> KAT_ANTENNAS </font> -- this file contains the 
 	    information about the instrument such as antenna positions, 
@@ -107,28 +106,26 @@ We need a file in which we can write and store data (visibilities) and this file
 A typical MS should contain information such as a central frequency of the observation, 
 	a total observation time (synthesis time), integration time
 	per visibilty point, 
-	number of channels and the pointing centre defined in terms of right ascension (RA) and declination (DEC).
+	number of channels and the pointing centre defined in terms of right ascension (ra) and declination (dec).
 </p>
 We can provide all these information on the command line but this can become tideous. 
-	An alternative is to provide the configuration file. Below I attached an image 
-	showing what this file entails, and you can also open it
-	(<font color="red"> config.json </font>) with an editor of your choice and you will see the following. 
-						Note that I added comments to options I added something.  
+	An alternative approach is to provide the configuration file, see Fig 1 (with commends amended for the 
+						parameters we considered). 
 You can find more definitions by using the help command of <font face="MathJax_SansSerif"> simms </font>
 
 						
 <figure>
-  <img src="images/fulls/configcomments.png">
+  <img src="images/fulls/configcomments.jpg">
   <center> <figcaption> Figure 1. Simms Configuration File </figcaption> </center>
 </figure>
-<blockquote>
+<blockquote text-align:right>
 For our observation, the central frequency=1445MHz, pointing centre ra = 19h 15m 53.304s,
-	dec = -74d39m37.90s, the observation time=12hours, and integration time=60 seconds. 
-	We using a single channel of width 16MHz and consider all the correlation outputs. 
+	dec = -74d39m37.90s, the observation time=12hours, integration time=60 seconds,  
+	using only a single channel of width 16MHz and all the correlation outputs. 
 						</blockquote>
-Lets create our MS file by running <font face="MathJax_SansSerif"> simms </font> on the command line using:
+Lets create our MS file by running <font face="MathJax_SansSerif"> simms </font> on the command line using: <br/>
     $ <font face="MathJax_SansSerif"> simms </font> -jc config.json
-  
+  <br />
 If successful, you should see the message: ##INFO: <font face="MathJax_SansSerif"> simms </font> succeeded						
 						
 					</section>	
