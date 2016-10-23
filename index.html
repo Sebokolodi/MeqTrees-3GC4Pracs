@@ -14,9 +14,6 @@
 		<style type="text/css">
   body { color: black; background: white; } 
 </style>
-		<style type="text/css">
-  body { margin-left: 10%; margin-right: 10%; }
-</style>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body id="top">
@@ -61,16 +58,42 @@ I recommend the following papers for further reading on RIME and its
 	and also refer to therein.
 </p>		
 					</section>
-
 				<!-- Two -->
 					<section id="two">
+						<h2> Logging to elwood and Check list </h2>
+
+I suppose by now all of us should have access to elwood. Login to elwood, and go to a directory named "Meqtrees2GC. Inside this directory you should find:
+<ol>
+    <li> The sky model <font color="red"> summs_field_kat7.lsm.html </font> . This model is in <font face="MathJax_SansSerif" size="2em"> Tigger </font> format and it contains sources drawn
+    from SUMSS covering approximately the field of view of the KAT-7 instrument. The survey from which they are drawn was conducted at 843 MHz so the sources have had their fluxes extrapolated to what they would be at 1445 MHz assuming a spectral index of 0.7, recall  $\large{S\sim \nu^{\alpha}}$.  
+    
+    <li> The <font color="red"> KAT_ANTENNAS </font> -- this file contains the information about the instrument such as antenna positions, 
+       dish size, elevation, etc.
+     
+    <li> The configuration file <font color="red"> config.json </font>.
+ </ol>
 
 					</section>
+				
+				
+				
+				
+				
 
 				<!-- Three -->
 					<section id="three">
 						
 
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 	
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
