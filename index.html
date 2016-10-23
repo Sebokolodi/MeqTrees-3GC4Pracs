@@ -333,10 +333,61 @@ not as smooth anymore but noise-like.
  <center>  <img src="images/fulls/addnoise1.png" width="60%">
    <figcaption> Figure 10. Adding Noise. </figcaption> </center>
 </figure>
-		
-						
+					
 				</section>
+		<section id="six">
+		
+			<h2>Corruption Simulation: UV Plane Components </h2>
+
+It is time to add something interesting. For this practicals we will only concern ourselves with the effects 
+that occur within the antennas referred to as uv-plane components. 
+We have to types of antenna-based (direction-independent) errors available to add; (1) feed angle error and (2)
+receiver complex gains. The former occurs when the feeds are misaligned and are not in focus. We will not consider this.
+To add receiver gains and phase errors, activate the 'Use G-Jones (gains/phases)' option in the uv-plane components section.
+There are a few toy error models that you can play around with here. You are encouraged to experiment, as always!
+For this simulation use the following options
+
+<br /> 
+<figure>
+  <center> <img src="images/fulls/gainerrors001.png" width="60%">
+   <figcaption> Figure 11. Adding Receiver complex gains. </figcaption> </center>
+</figure>
+<p>
+The example above applies a periodically varying error to the gain and phase components. This applies a sinusoidal
+wobble comple receiver gains to the visibilities. With the period randomized between the 
+specified min and max values, resulting in different drift rates for each element in the array. 
+</p>
+			<p>
+When you are done, <font color="red"> click compile </font>. First things first, open the Bookmarks. 
+Now you should see an extra option <font color="red">"G-Jones: Inspector plot"</font>. This is the most
+important plot at this stage but I encourage that both tabs are open. At the top of your Grided Viewer you should have
+"Output Visbilities: Inspect plot" also open but if not, go to bookmark and open the option. 
+			</p>
+Check if the output column is set correctly to <font color="red">"DATA" </font>. Click  
+	<font color="red">"Run Simulation"</font>. The G-Jones and Output visibilities must now be plotted and click 
+on their open tabs to view them. If you click on the G-Jones: Inspector plot you should see Figure 12. 
+This plot shows the real part of the gain corruptions for each of the seven antennas in the array for the
+XX polarization. You can flip between the complex products and the polarization products in the 
+viewer using the buttons in the lower right. 
+
+<br/> 
+<figure>
+  <center><img src="images/fulls/gainsrealXX01.png" width="90%">
+   <figcaption> Figure 12. $G$-Jones Inspector plot: Real of the XX polarisation. </figcaption> </center>
+</figure>
+
+<br/>
+Lets make the dirty image. You normally don't want to create clean image of the corrupted visibilities. Open the 
+	imaging options and carry on as we did previously, but now change the <font color="red"> output Fits file to
+Simulated_Gcorrupted_dirty.fits </font>.  Figure 13 shows the dirty image of the corrupted visibilities;
+
+<br/> 
+<figure>
+  <center><img src="images/fulls/dirtyGcorrupted001.png" width="60%">
+   <figcaption> Figure 12. Dirty Image: G-Jones corrupted visibilities. </figcaption> </center>
+</figure>
 			
+				</section>
 				
 				
 	
