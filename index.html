@@ -34,7 +34,7 @@
 						<header class="major">
 							<h2>Introduction</h2>
 						</header>
-				<p> <font face="MathJax_SansSerif" size="2em"> MeqTrees</font>, as
+				<p> <font face="MathJax_SansSerif"> MeqTrees</font>, as
 					you might have heard from the previous lectures, is simply a software 
 					tool that allows us to:</p>
 <ul>
@@ -42,7 +42,7 @@
  <li> calibrate both the simulated and real astronomical data.
 </ul>
 <p>
-<font face="MathJax_SansSerif" size="2em"> MeqTrees</font> uses the Radio Interferometer Measurement Equation (RIME)  or in short, the Measurement Equation to try and predict visibilities by modelling what we think the observed sky looks like and then corrupting the model with various propagation effects. Such effects include 
+<font face="MathJax_SansSerif"> MeqTrees</font> uses the Radio Interferometer Measurement Equation (RIME)  or in short, the Measurement Equation to try and predict visibilities by modelling what we think the observed sky looks like and then corrupting the model with various propagation effects. Such effects include 
 the bandpass, receiver complex gains, polarisation leakage, primary beam, parallactic angle (for alt-az mount such as the JVLA, KAT7, MeerKAT) and atmospheric phases. The Measurement Equation is very flexible in a such a way that it allows the different effects to be representated as separate terms, thus, making it possible to solve for the individual effects independently. </p>
 Corruption effects are generally grouped into direction independent (DI) and direction dependent (DD).
 						The DI effects occur at the antennas and are
@@ -88,7 +88,12 @@ I suppose by now all of us should have access to elwood. Login to elwood, and go
 </h3>
 
 <p>
-Earlier I did mention <font face="MathJax_SansSerif" size="2em"> Tigger </font> and I think you deserve to know what it is. Ok, so <font face="MathJax_SansSerif" size="2em"> Tigger </font> is a tool designed to help us view and edit the sky models, and also to view images. You might be familiar with similar tools such as <font face="MathJax_SansSerif" size="2em"> kvis </font>, <font face="MathJax_SansSerif" size="2em"> ds9 </font>, etc. You can open the above sky model using <font face="MathJax_SansSerif" size="2em"> Tigger </font> by typing the command that follows, and you may close it when you're done appreciating it.
+Earlier I did mention <font face="MathJax_SansSerif" size="2em"> Tigger </font> and 
+	I think you deserve to know what it is. Ok, so <font face="MathJax_SansSerif"> Tigger </font> 
+	is a tool designed to help us view and edit the sky models, and also to view images. 
+	You might be familiar with similar tools such as <font face="MathJax_SansSerif"> kvis </font>, 
+	<font face="MathJax_SansSerif"> ds9 </font>, etc. You can open the above sky model using 
+	<font face="MathJax_SansSerif" size="2em"> Tigger </font> by typing the command that follows, and you may close it when you're done appreciating it.
 						</p>
     $ tigger summs_field_kat7.lsm.html 
 <p>
@@ -97,8 +102,8 @@ We need a file in which we can write and store data (visibilities) and this file
 	empty MS file using a software package called <font face="MathJax_SansSerif" size="2em"> simms </font>.
 						</p>
 <p>						
-A typical MS should contain information such as a central frequency $\nu_o$ of the observation, 
-	a total observation time (synthesis time), integration time (<span class="math inline">\(\Delta t\)</span>)
+A typical MS should contain information such as a central frequency of the observation, 
+	a total observation time (synthesis time), integration time
 	per visibilty point, 
 	number of channels and the pointing centre defined in terms of right ascension (RA) and declination (DEC).
 We can provide all these information on the command line but this can become tideous. An alternative is to provide the configuration file. Below I attached an image showing what this file entails, and you can also open it (<font color="red"> config.json </font>) with an editor of your choice e.g
@@ -129,8 +134,8 @@ In particular, for our observation the central frequency is 1445MHz, pointing ce
 	 
 You can find more definitions by using the help command of <font face="MathJax_SansSerif" size="2em"> simms </font>
 </ul>
-Lets create our MS file by running <font face="MathJax_SansSerif" size="2em"> simms </font> on the command line using:
-    $ <font face="MathJax_SansSerif" size="2em"> simms </font> -jc config.json
+Lets create our MS file by running <font face="MathJax_SansSerif"> simms </font> on the command line using:
+    $ <font face="MathJax_SansSerif"> simms </font> -jc config.json
   
 If successful, you should see the message: ##INFO: <font face="MathJax_SansSerif" size="2em"> simms </font> succeeded						
 						
