@@ -1272,9 +1272,9 @@
 				background-position:	top left,	center center;
 				background-size:		auto,		cover;
 				left: auto;
-				padding: ($size-header-pad * 1.5) $size-header-pad;
+				padding: ($size-header-pad * 1.0) $size-header-pad;
 				position: relative;
-				text-align: center;
+				text-align: left;
 				top: auto;
 				width: 100%;
 				display: block;
@@ -1293,7 +1293,7 @@
 			#footer {
 				background-attachment:	scroll;
 				background-color:		_palette(accent2, bg);
-				background-image:		url('images/overlay.png'),		url('../../images/bg.jpg');
+				background-image:		url('images/overlay.png'),		url('../../images/cygnus.jpg');
 				background-position:	top left,						bottom center;
 				background-repeat:		repeat,							no-repeat;
 				background-size:		auto,							cover;
