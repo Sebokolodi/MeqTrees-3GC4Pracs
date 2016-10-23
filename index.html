@@ -208,6 +208,35 @@ Some pre-defined ones are provided by turbo-sim.py. The bookmarks will help you 
   <center><img src="images/fulls/griddedviewTDL1.png" width="70%">
   <figcaption> Figure 3. Gridded Viewer showing bookmarked output visibilities </figcaption> </center>
 </figure>
+						<br />
+						<h3> Running Simulation </h3>
+<p>
+Before running simulation, make you sure that you choose the appropriate column to simulate
+the data in. Thus, in the "TDL Jobs and Run-time" 
+set <font color="red"> "Output MS column" to "DATA" </font> . This is where the visibility measurements are written 
+	for real observations. </p>
+
+The "Tile size (timeslots)" option determines the size of the data chunks that are processed. Generally, 
+the higher this is the less time it will take to process your simulation, and how high you can set it generally 
+depends on how expensive your computer was.  It won't make much difference here though as this is such a small simulation. 
+Set this to <font color="red"> Tile size(timeslots) = 8 </font>. I prefer choosing a smaller number 
+(but you wouldn't want to do this for big data) so that I can see the data processing. 
+
+Ignore "Imaging options" for now, we'll get on to this after running the simulation. <font color="red"> Click on 
+"Run Simulation" </font>. At this point you should be able to see plots appearing on the Gridded viewer. 
+See the green (relative amplitudes per baseline, XX) and red (phases, XX) plots below. <br />
+
+On the Gridded viewer menu, zoom into one of the baselines by left clicking and dragging the cursor around 
+the area of interest. You will see that the visibilities are smooth across the time. <br />
+<figure>
+ <center> <img src="images/fulls/amplitude1.png" width="80%">
+   <figcaption> Figure 4. Relative Amplitudes (XX pol): Corruption and Noise Free Simulation  </figcaption> </center>
+</figure>
+<br> 
+<figure>
+  <center> <img src="images/fulls/phasesSim1.png" width="80%">
+   <figcaption> Figure 5. Relative Phase (XX pol): Corruption and Noise Free Simulation  </figcaption> </center>
+</figure>						
 
 				</section> 
 				
