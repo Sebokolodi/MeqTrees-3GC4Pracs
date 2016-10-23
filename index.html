@@ -388,6 +388,85 @@ Simulated_Gcorrupted_dirty.fits </font>.  Figure 13 shows the dirty image of the
 </figure>
 			
 				</section>
+			
+				<section id="seven">
+				<h1> Calibration Time <h1>
+
+Similar to Siamese, <font face="MathJax_SansSerif"> MeqTrees </font> consist of a calibration framework 
+contain in a file called "Calico". Go to <font color="red"> TDL </font>, naviate to <font color="red"> Cattery </font>
+then <font color="red"> Calico </font> and choose <font color="red"> calico-stefcal.py </font>.
+<p>
+As with the SIMULATION, calibration also takes the MS and the sky model. Calibration constructs the RIME by corrupting
+the sky model visibilities with various image plane (DD) and uv-plane (DI) effcts. And instead of simply predicting data
+and writing it to the MS, it predicts data and compares this to the existing data the that MS contains. 
+It compares these using a numerical solver that minimises the difference between the observed and the predicted 
+visibilities.
+</p>
+					<p>
+Check if the MS is correct and Load the Sky model as before. The RIME offers ridiculous amounts of flexibility,
+as partially evidenced by the daunting amount of compile time options in that popped up when the script is loaded, 
+but all we'll be solving for here are the G-Jones terms, i.e. a single solvable complex gain term for each element of
+the array. Most of the options will be ignored for now. 
+					</p>
+<figure>
+  <center><img src="images/fulls/2GCcalib.png" width="60%">
+  <figcaption> Figure 13. Calibration Options: calico-stefcal.py . </figcaption> </center>
+</figure>
+
+<p>
+
+<font color="red"> Output visibilities: </font> Here you are selecting the visibilities  you want to output.
+This can be the corrected visibilities, residual visibilities and so on. We leave the rest as defaults. The type of 
+Jones matrices we using is the diagonal gain "GianDiag". This just sets up a 2x2 Jones matrix for each
+	antenna with solvable terms on the diagonal (XX/YY). </p>
+
+Click compile. 
+
+<p> There are a few more options in the run time menu than we are used to with the simulation script.
+	Expand <font color="red"> Data selection and flagging  </font> menu and 
+ensure that <font color="red">'Input MS column' = DATA </font> and 
+<font color="red">'Output MS column' = CORRECTED_DATA </font>. This just means you are calibrating the visibilities
+stored in the column DATA and that you writing and storing the calibrated visibilities in the CORRECTED_DATA column.
+</p>
+
+<p>'Read flags from MS' option: you set this option if you have flagged data column in your MS and you don't want to 
+be solving for data that you've flagged as RFI for example.
+Select Remove all the exisiting gain solutions, unless you want to add into the existing.</p>
+
+<p>
+Select <font color="red"> Click on Run StefCal</font> </p>
+
+<figure>
+  <center><img src="images/fulls/calico-tdljobs.png" width="60%">
+   <figcaption> Figure 14. Calibration: TDL Jobs and Runtime Options. </figcaption> </center>
+</figure>
+<p>
+Finally, we can image our corrected data. Expand the Make an image from this MS option on the TDL Jobs and Runtime Options.
+If it was closed, go to TDL Exece to open it.  
+From there you can change the Name of the Output FITS file  to <font color="red"> Calibrated_GJones_dirty.fits 
+</font> and for making a clean image use <font color="red"> Calibrated_GJones_clean.fits </font>. Change image size 
+and pixel size to be the same as those we used above. And leave the rest like we did earlier. Make both the images and
+they should look something like this DR= [ -0.1082, 0.2245]: 
+</p>
+
+<figure>
+ <center> <img src="images/fulls/dirtyGcorrected.png" width="60%">
+  <figcaption> Figure 15. G-Jones Calibrated dirty Image. </figcaption> </center>
+</figure>
+
+
+<br/>
+<figure>
+  <center><img src="images/fulls/cleanGcorrected01.png" width="60%">
+  <figcaption> Figure 15. G-Jones Calibrated clean Image. </figcaption> </center>
+</figure>
+<br/>
+
+As you see, our images are almost the same as the corruption and noise-free image. 
+				
+					
+				
+				</section>
 				
 				
 	
