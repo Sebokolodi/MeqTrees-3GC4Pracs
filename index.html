@@ -221,13 +221,14 @@ the higher this is the less time it will take to process your simulation, and ho
 depends on how expensive your computer was.  It won't make much difference here though as this is such a small simulation. 
 Set this to <font color="red"> Tile size(timeslots) = 8 </font>. I prefer choosing a smaller number 
 (but you wouldn't want to do this for big data) so that I can see the data processing. 
-
+<br />
 Ignore "Imaging options" for now, we'll get on to this after running the simulation. <font color="red"> Click on 
 "Run Simulation" </font>. At this point you should be able to see plots appearing on the Gridded viewer. 
 See the green (relative amplitudes per baseline, XX) and red (phases, XX) plots below. <br />
 
 On the Gridded viewer menu, zoom into one of the baselines by left clicking and dragging the cursor around 
 the area of interest. You will see that the visibilities are smooth across the time. <br />
+						
 <figure>
  <center> <img src="images/fulls/amplitude1.png" width="80%">
    <figcaption> Figure 4. Relative Amplitudes (XX pol): Corruption and Noise Free Simulation  </figcaption> </center>
@@ -236,8 +237,28 @@ the area of interest. You will see that the visibilities are smooth across the t
 <figure>
   <center> <img src="images/fulls/phasesSim1.png" width="80%">
    <figcaption> Figure 5. Relative Phase (XX pol): Corruption and Noise Free Simulation  </figcaption> </center>
-</figure>						
+						</figure>
+	<h3> Imaging </h3>
 
+You have noticed that after running the simulations the "TDL Jobs $ Run Options" disappear. 
+To open this again you don't need to open TDL again but you can click on <font color="red"> TDL Exec </font>. 
+<br/>
+On the "TDL Jobs &amp; Runtime Options" expand imaging options, see Fig 7. 
+You have two types of images you can make; (1) the dirty image and (2) the clean image 
+(expand <font color="red">make clean image </font>). The dirty image is the sky image convolved by the dirty 
+beam or Point spread function (PSF, fourier transform of the uv-coverage). The dirty image has 
+sidelobes which are due to spaces in the uv-coverage. To remove these sidelobes we use deconvolution
+(or <font face="MathJax_SansSerif" > CLEAN </font>) algorithms such as
+<font face="MathJax_SansSerif" > clark </font>, <font face="MathJax_SansSerif" > csclean </font>, 
+<font face="MathJax_SansSerif"> WsClean</font> and <font face="MathJax_SansSerif"> hogbom </font>.
+
+
+<figure>
+  <center><img src="images/fulls/TDLimaging01.png" width="60%">
+   <figcaption> Figure 7. Imaging Options </figcaption> </center>
+</figure> 						
+
+						
 				</section> 
 				
 			
