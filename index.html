@@ -284,20 +284,59 @@ etc. <font color="red">Click on make clean image </font>.
 <blockquote>
 At times an empty image pops out and apologies if it does for this practical. What I've noticed is that sometimes the 
 clean image cannot be created using the DATA column, thus you will need to change the output column first to 
-CORRECTED_DATA then generate the data into this column by running the simulation again, and finally make the clean image. 
+	<font face="MathJax_SansSerif"> CORRECTE </font>D_DATA then generate the data into this column by running the simulation again, and finally make the clean image. 
 Your output should look like Fig 9.
 						</blockquote>
 <br/> 
 <figure>
-  <img src="images/fulls/clean001.png" width="60%">
-  <center> <figcaption> Figure 9. Clean Image: Noise and Corruption Free </figcaption> </center>
+  <center>  <img src="images/fulls/clean001.png" width="60%">
+ <figcaption> Figure 9. Clean Image: Noise and Corruption Free </figcaption> </center>
 </figure>
 		
+	
 				</section> 
-				
+		<!-- Five -->
+					<section id="five">	
+						
+						<h2> Noise-Simulation: Lets Add the Noise </h2>
+
+Lets load the "TDL" again and now we don't need to load "turbo-sim.py" because we have one. Select Reload the
+Existing TDL script. The "TDL Compile-time Options" should appear. 
+
+To add the noise expand "Add noise". You can choose to add noise directly "Add noise, Jy per visibility" or use 
+the second option where you can enter the SEFD, bandwidth and integration time -- expand "Compute from SEFD" option.
+
+<ol>
+<li>For the first option, you will normally use radiometer equation to compute the noise. But I prefer if 
+	<font face="MathJax_SansSerif"> MeqTrees </font> computes this for me. Usually, 
+you can use this option to put any random noise value there
+, e.g 50 Jy per visibility. You are allowed to experiement.
+
+<li> The second option, the SEFD for KAT7 is ~1290 (assuming system temperature of 35K, but 30K is usually 
+the average one. Perhaps you might want to compute SEFD using 30K). Recall that integration time was 60 second and 
+bandwidth 16MHz.  
+						</ol>
+Note that the noise specified here is noise per visibility measurement
+and not the desired noise for your image. When using the second option we should see the noise 
+~0.02944Jy per visibility measurement which is too small, thus in your 
+sparetime you might want to experiement by setting the noise higher, say 20Jy per visibility and deselecting
+"Compute from SEFD". You should be able to see very noisy-like visibilities. 
+
+For now we should leave it to ~0.02944Jy per visibility. Again <font color="red">click Compile, open bookmarks, 
+and click run simulation</font>. On the bookmark or gridded screen you will see the output visibilities and 
+try to see if you can spot any difference. First, you will need to zoom in unless your eyes have high resolution.
+To zoom in, left click and drag the cursor to select the area of interest. You will see that the visibilities are 
+not as smooth anymore but noise-like. 
+
+<br> 
+<figure>
+ <center>  <img src="images/fulls/addnoise1.png" width="60%">
+   <figcaption> Figure 10. Adding Noise. </figcaption> </center>
+</figure>
+		
+						
+				</section>
 			
-				
-				
 				
 				
 	
