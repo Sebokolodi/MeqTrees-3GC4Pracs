@@ -217,9 +217,9 @@ the area of interest </font>. You will see that the visibilities are smooth acro
 You have noticed that after running the simulations the "TDL Jobs &amp; Run Options" disappear. 
 To open this again you don't need to open TDL again but you can click on <font color="red"> TDL Exec </font>. 
 <br/>
-On the "TDL Jobs &amp; Runtime Options" expand imaging options, see Fig 7. 
+<font color="red"> On the "TDL Jobs &amp; Runtime Options" expand imaging options </font>, see Fig 7. 
 You have two types of images you can make; (1) the dirty image and (2) the clean image 
-(expand <font color="red">make clean image </font>). The dirty image is the sky image convolved by the dirty 
+(expand make clean image). The dirty image is the sky image convolved by the dirty 
 beam or Point spread function (PSF, fourier transform of the uv-coverage). The dirty image has 
 sidelobes which are due to spaces in the uv-coverage. To remove these sidelobes we use deconvolution
 (or <font face="MathJax_SansSerif" > CLEAN </font>) algorithms such as
@@ -236,7 +236,8 @@ sidelobes which are due to spaces in the uv-coverage. To remove these sidelobes 
 <li> Imaging weights: leave it to natural. See imaging lectures to learn about these weightings.
 <li> <font color="red"> image size, in pixels: 1024 </font>
 <li> <font color="red"> image size, in arcmin: 180 </font> (this is the cell size) using you want it less or equal to the resolution element.
-<li> <font color="red"> Autostart image viewer: tigger </font>. Other option is  <font face="MathJax_SansSerif" size="2em"> kvis </font> or you can choose to enter any which is supported. 
+<li> <font color="red"> Autostart image viewer: tigger </font>. Other option is 
+	<font face="MathJax_SansSerif" size="2em"> kvis </font> or you can choose to enter any which is supported. 
 <li> <font color="red"> Click on make dirty image </font>
 						</ul>
 <p>
@@ -279,9 +280,9 @@ the second option where you can enter the SEFD, bandwidth and integration time -
 you can use this option to put any random noise value there
 , e.g 50 Jy per visibility. You are allowed to experiement.
 
-<li> The second option, the SEFD for KAT7 is ~1290 (assuming system temperature of 35K, but 30K is usually 
-the average one. Perhaps you might want to compute SEFD using 30K). Recall that integration time was 60 second and 
-bandwidth 16MHz.  
+	<li> The second option, the <font color="red"> SEFD for KAT7 is ~1290 </font> (assuming system temperature of 35K, but 30K is usually 
+the average one. Perhaps you might want to compute SEFD using 30K). Recall that <font colo="red"> integration time was 60 second and 
+		bandwidth 16MHz </font>.  
 						</ol>
 Note that the noise specified here is noise per visibility measurement
 and not the desired noise for your image. When using the second option we should see the noise 
