@@ -252,8 +252,9 @@ or click the last button with red, yellow, green bars and adjust the limits of t
 <p>
 Lets make a clean image so that we can see the difference. To open the "TDL Jobs &amp; Runtime Options again" 
 click on <font color="red"> "TDL Exec" </font>. Then, go to imaging options and don't change any of the above settings, 
-expand the "make clean image" as in Fig 7, and leave the default settings i.e  <font face="MathJax_SansSerif"> clark </font>,
-etc. <font color="red">Click on make clean image </font>. 
+expand the "make clean image" as in Fig 7, lets choose
+	<font face="MathJax_SansSerif"> csclean </font> imager -- as we have learned that is very good,
+	and you leave the others as defaults.  <font color="red">Click on make clean image </font>. 
 						</p>
 <br/> 
 <figure>
@@ -377,7 +378,7 @@ visibilities.
 Check if the MS is correct and Load the Sky model as before. The RIME offers ridiculous amounts of flexibility,
 as partially evidenced by the daunting amount of compile time options in that popped up when the script is loaded, 
 but all we'll be solving for here are the G-Jones terms, i.e. a single solvable complex gain term for each element of
-the array. Most of the options will be ignored for now. 
+the array. Most of the options will be ignored for now.
 					</p>
 <figure>
   <center><img src="images/fulls/2GCcalib.png" width="60%">
@@ -390,7 +391,7 @@ the array. Most of the options will be ignored for now.
 This can be the corrected visibilities, residual visibilities and so on. But we want to output corrected data. 
 	We leave the rest as defaults. The type of 
 Jones matrices we using is the diagonal gain "GianDiag". This just sets up a 2x2 Jones matrix for each
-	antenna with solvable terms on the diagonal (XX/YY). </p>
+	antenna with solvable terms on the diagonal (XX/YY). One more thing; <font color="red"> Select Enable visualisers.</font> </p>
 
 					<font color="red"> Click compile </font>. 
 
@@ -405,9 +406,7 @@ stored in the column DATA and that you writing and storing the calibrated visibi
 <font color="red"> Read flags from MS' </font> option: you set this option
 if you have flagged data column in your MS and you don't want to 
 be solving for data that you've flagged as RFI for example. 
-	This MS contains RFI flagged data column thus, select this option.
-	Select <font color="red"> Remove all the exisiting gain solutions </font>,
-	unless you want to add into the existing.</p>
+I did not attempt to flag any data so you can leave this option in peace /p>
 
 <p>
 Select <font color="red"> Click on Run StefCal</font> </p>
