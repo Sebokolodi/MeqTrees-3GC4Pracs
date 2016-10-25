@@ -94,9 +94,9 @@ and go to a directory named "Meqtrees2GC. Inside this directory you should find:
 					
 			<!-- Four -->
 					<section id="four">
-						
+					<header class="major">	
 				<h2>  Simulating Visibilities: No Noise and Instrumental Effects </h2>
-
+                           </header>
 You may be wondering why do we need to simulate the data to begin with?. Well, for our 
 case we don't have much  choice since we don't have any real observed data, so we are basically 
 trying to create own corrupted data which we will calibrate later :). 
@@ -262,9 +262,9 @@ At times an empty image pops out and that will be unfortunate if that happens in
 				</section> 
 		<!-- Five -->
 					<section id="five">	
-						
+						<header class="major">
 						<h2> Noise-Simulation: Lets Add the Noise </h2>
-
+   					</header>
 Lets load the "TDL" again and now we don't need to load "turbo-sim.py" because we have one. Select Reload the
 Existing TDL script. The "TDL Compile-time Options" should appear. 
 
@@ -301,9 +301,9 @@ not as smooth anymore but noise-like.
 					
 				</section>
 		<section id="six">
-		
+		       <header class="major">
 			<h2>Corruption Simulation: UV Plane Components </h2>
-
+			</header>
 It is time to add something interesting. For this practicals we will only concern ourselves with the effects 
 that occur within the antennas referred to as uv-plane components. 
 We have to types of antenna-based (direction-independent) errors available to add; (1) feed angle error and (2)
@@ -355,8 +355,9 @@ Simulated_Gcorrupted_dirty.fits </font>.  Figure 13 shows the dirty image of the
 				</section>
 			
 				<section id="seven">
+			        <header class="major">
 				<h1> Calibration Time </h1>
-
+				</header>
 Similar to Siamese, <font face="MathJax_SansSerif"> MeqTrees </font> consist of a calibration framework 
 contain in a file called "Calico". Go to <font color="red"> TDL </font>, naviate to <font color="red"> Cattery </font>
 then <font color="red"> Calico </font> and choose <font color="red"> calico-stefcal.py </font>.
@@ -426,9 +427,7 @@ they should look something like this DR= [ -0.1082, 0.2245]:
   <figcaption> Figure 15. G-Jones Calibrated clean Image. </figcaption> </center>
 </figure>
 <br/>
-
-					
-Do you see any difference? 
+				 
 				
 					
 				
