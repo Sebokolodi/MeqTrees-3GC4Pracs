@@ -74,25 +74,14 @@ and go to a directory named "Meqtrees2GC. Inside this directory you should find:
 	    from which they are drawn was conducted at 843 MHz so the sources have had their
 	    fluxes extrapolated to what they would be at 1445 MHz assuming a spectral index of 0.7.
     
-    <li> The <font color="red"> KAT_ANTENNAS </font> -- this file contains the 
-	    information about the instrument such as antenna positions, 
-       dish size, elevation, etc.
-     
-    <li> The configuration file <font color="red"> config.json </font>.
+    <li> An empty Measurement set <font color="red"> </font>.  This file contains all the observation setup
+	    such as the u, v, w points, timeslots, and frequencies.
+	    In this case the MS is a 1445MHz KAT-7 observation spanning 12 hours,
+	    with 60 seconds of integration time per visibility point. 
+	    There's a single 16 MHz channel and the pointing
+	    centre is RA = 19h 15m 53.304s, Dec = -74d39m37.90s. 
  </ol>
-
-					</section>
-				
-				
-		
-				<!-- Three -->
-					<section id="three">
-						
-<h3> Additional Packages: Tigger and SIMMS 
-</h3>
-
-Earlier I did mention <font face="MathJax_SansSerif"> Tigger </font> and 
-	I think you deserve to know what it is. Ok, so <font face="MathJax_SansSerif"> Tigger </font> 
+<font face="MathJax_SansSerif"> Tigger </font> 
 	is a tool designed to help us view and edit the sky models, and also to view images. 
 	You might be familiar with similar tools such as <font face="MathJax_SansSerif"> kvis </font>, 
 	<font face="MathJax_SansSerif"> ds9 </font>, etc. You can open the above sky model using 
@@ -100,37 +89,9 @@ Earlier I did mention <font face="MathJax_SansSerif"> Tigger </font> and
 						and you may close it when you're done appreciating it.
 	<p>
     $ tigger summs_field_kat7.lsm.html 
-						</p>
-<p>
-We need a file in which we can write and store data (visibilities) and this file is
-	called a Measurement Set (MS -- CASA Table). We are going to create an 
-	empty MS file using a software package called <font face="MathJax_SansSerif"> simms </font>.			
-A typical MS should contain information such as a central frequency of the observation, 
-	a total observation time (synthesis time), integration time
-	per visibilty point, 
-	number of channels and the pointing centre defined in terms of right ascension (ra) and declination (dec).
-</p>
-We can provide all these information on the command line but this can become tideous. 
-	An alternative approach is to provide the configuration file, see Fig 1 (with commends amended for the 
-						parameters we considered). 
-You can find more definitions by using <font face="MathJax_SansSerif"> simms </font> help command.
-
 						
-<figure>
-  <img src="images/fulls/configcomments.jpg">
-  <center> <figcaption> Figure 1. Simms Configuration File </figcaption> </center>
-</figure>
-<blockquote text-align:right>
-For our observation, the central frequency=1445MHz, pointing centre ra = 19h 15m 53.304s,
-	dec = -74d39m37.90s, the observation time=12hours, integration time=60 seconds,  
-	using only a single channel of width 16MHz and all the correlation outputs. 
-						</blockquote>
-Lets create our MS file by running <font face="MathJax_SansSerif"> simms </font> on the command line using: <br/>
-    $ <font face="MathJax_SansSerif"> simms </font> -jc config.json
-  <br />
-If successful, you should see the message: ##INFO: <font face="MathJax_SansSerif"> simms </font> succeeded						
-						
-					</section>	
+					</section>
+					
 			<!-- Four -->
 					<section id="four">
 						
