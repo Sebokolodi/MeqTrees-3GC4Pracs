@@ -34,28 +34,20 @@
 						<header class="major">
 							<h2>Introduction</h2>
 						</header> 
-In this practical, we are now going to use <font face="MathJax_SansSerif"> MeqTrees</font> to corrupt the incoming signal
-with direction dependent effects (DDEs) unlike in the previous practical, 
-<a href="https://sebokolodi.github.io/MeqTrees-3GC4Pracs/index.html"> MeqTrees2GC </a>,
-where we only dealt with direction-idependent effects (DIEs, in particular, the receiver gains or G-Jones). 
-If you recall, 2GC methods
-assume that all the DDEs are the same across all antennas, thus,
-can be approximated as being DI. This approximation is valid for narrower field of views and small interferometers
-						but has shown to be insufficient to deal with the data from the newly built
-large interferometers.  The latter see through different atmospheres and consist of 
-complicated and imperfect beams (mispointings, parallatic rotation).  
-<p>						
-So essentially, what we are going to do in this practical is to corrupt the signal
-	with DDEs and then see what we get after applying only the G-Jones correction. 
-Later, I will introduce you to a technique that is currently available on
-<font face="MathJax_SansSerif"> MeqTrees</font> to correct for DDEs. 
-This technique is known as the differential gains (DGs) -- this term must be familiar to you by now 
-	(that is if you were not taking a quick nap which probably highly recommended during workshops). </p>
 						
-Note that I will include all the relevant steps to carry out this
-practical but I won't provide explainations to most of the things and you may need to
-refer to <a href="https://sebokolodi.github.io/MeqTrees-3GC4Pracs/index.html"> MeqTrees2GC </a>
- or ask me and/or preferably my supervisors :).
+The main purpose of this practical is to give us a basic intro to
+direction dependent (DD) calibration as implemented in <font face="MathJax_SansSerif"> MeqTrees</font>. If you recall
+from previous lectures and <font face="MathJax_SansSerif"> MeqTrees</font> practical, that 2GC methods assume that all propagation
+effects are direction independent (DI) and any present DD effect is the same across all
+the receivers (trivial DDEs). This approximation is valid for narrower field of views but has 
+already started showing its limitations even for smaller arrays such as the KAT7. 
+The DD calibration technique to be applied is called the differential gains (DGs). 
+This approach solves for G-Jones (DI) and DD effects simultaneously.
+It does this by estimating and correcting for receiver gain drifts (i.e GJones) in short
+time/frequency scales and the DGs in long time/frequency scales. 						
+		
+								
+						
 				</section>		
 
         <section id="two">
