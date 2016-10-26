@@ -41,46 +41,45 @@ from previous lectures and <font face="MathJax_SansSerif"> MeqTrees</font> pract
 effects are direction independent (DI) and any present DD effect is the same across all
 the receivers (trivial DDEs). This approximation is valid for narrower field of views but has 
 already started showing its limitations even for smaller arrays such as the KAT7. 
-The DD calibration technique to be applied is called the differential gains (DGs). 
+The DD calibration technique implemented on <font face="MathJax_SansSerif"> MeqTrees</font> is called
+the differential gains (DGs). 
 This approach solves for G-Jones (DI) and DD effects simultaneously.
 It does this by estimating and correcting for receiver gain drifts (i.e GJones) in short
-time/frequency scales and the DGs in long time/frequency scales. 						
-		
-								
+time/frequency scales and the DGs in long time/frequency scales. So the G solutions subsume all the DDEs towards
+the dominant source in the field and the DGs solves for these DDEs in the direction
+of these sources. 
+						<p>
+In this practical, we are going to use real observation data whereas in the previous MeqTrees 2GC practical we
+had to generate our own visibilities (through simulations) to calibrate. We going to calibrate the KAT7 data. 
+						</p>
+									
 						
 				</section>		
 
         <section id="two">
 						<header class="major">
-							<h2>Simulation: DIE + DDE</h2>
+							<h2>Check List</h2>
 						</header> 
-	First, before we get ahead of ourselves, let us check it we have all the necessary files to perform simulations
-		and
-		calibrations. Log in to elwood and on your home make a new directort and give it a reason name e.g
-		MeqTrees3GC, and then copy the files below from ... into this new directory. 
+	First, before we get ahead of ourselves, let us check it we have all the necessary files to perform calibration.
+	 Log in to elwood. On your home directory you will find folder named "MeqTrees3GC" and in this folder you should
+		find the following
 	<ul>
-		<li> The sky model (<font color="blue"> summs_field.lsm.html </font>)
-		<li> The <font face="MathJax_Serif" > simms </font> configuration <font color="blue"> config.json </font>
-		<li> The antenna configuration table, <font color="blue"> KAT7_ANTENNAS </font>
+		<li> The sky model : <font color="blue"> dee4.lsm.html </font>
+
+		<li> The Measurement Set: <font color="blue"> deep4-10s-10ch.ms </font>
 		</ul>
 		<p>
- When you are done copying, generate a new empty MS file: simms -jc config.json 
-		</p>
-	<p>
-		Now open <font face="MathJax_Serif"> MeqTrees </font>: meqbrowser
-		</p>
-		Press <font color="red"> start </font> and a "TDL Options &amp;" window should open. Go to "TDL Options"
-		and "Load TDL script" and naviate to Catter folder -- Siamese -- then load the 
-		<font color="red"> turbo_sim.py </font>. 
-                 		
+		
 				</section>
 
 				<section id="three">
 						<header class="major">
-							<h2>G Only Calibration</h2>
-						
-							<h3> Imaging </h3>
+							<h2> Imaging the Field</h2>
 						</header> 
+					
+Let us start by imaging the visibilities so that we can have some idea of what we are in for. 
+Open meqbroswer, press start, go to TDL then Load TDL Script and navigate to Cattery then
+calico and load calico-stefcal.py. 
         
 				</section>
 				
