@@ -106,7 +106,21 @@ You should see the image below:
 						<header class="major">
 							<h2> G Only Calibration: 2GC</h2>
 						</header> 
+Reload the TDL by <font color="blue"> clicking on reload </font> option next to the TDL Exec. 
+The "TDL Compile-time Options" window should reappear. 
+Now we going to correct for receiver complex gains (G-Jones) i.e. 2GC. 
+Figure 2 shows the settings used for this prac. First, <font color="blue"> ensure that the MS files is correct </font>.
+<font color="blue"> Expand the “Sky model” option and select “TiggerSkyModel” and load the sky model “deep4.lsm.html”</font>.
+We want to output the <font color="blue"> corrected data </font>.
+<font color="blue"> Expand and select the " Use G-Jones direction-independent gain" </font> . 
+Set the <font color="blue"> solution interval, time axis to 5 and frequency axis to 10 </font>.
+The Jones Matrix type should be set to<font color="blue"> GainDiag </font>, select <font color="blue"> enable visualization </font>. 
+Leave the number of <font colot="blue"> major loops to 2 </font> and the rest of the options as defaults.	
 					
+<figure>
+ <center> <img src="images/DDEImages/GJonesetup.png" width="80%">
+   <figcaption> Figure 2. G Only Calibration TDL Compile-time Setup. </figcaption> </center>
+</figure>
 					
 				</section>
 				
