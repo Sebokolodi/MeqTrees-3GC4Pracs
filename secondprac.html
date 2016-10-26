@@ -44,8 +44,8 @@ already started showing its limitations even for smaller arrays such as the KAT7
 The DD calibration technique implemented on <font face="MathJax_SansSerif"> MeqTrees</font> is called
 the differential gains (DGs). 
 This approach solves for G-Jones (DI) and DD effects simultaneously.
-It does this by estimating and correcting for receiver gain drifts (i.e GJones) in short
-time/frequency scales and the DGs in long time/frequency scales. So the G solutions subsume all the DDEs towards
+It does this by estimating and correcting for receiver gain drifts (i.e GJones) on short
+time/frequency scales and the DGs on longer time/frequency scales. So the G solutions subsume all the DDEs towards
 the dominant source in the field and the DGs solves for these DDEs in the direction
 of these sources. 
 						<p>
@@ -78,17 +78,36 @@ had to generate our own visibilities (through simulations) to calibrate. We goin
 						</header> 
 					
 Let us start by imaging the visibilities so that we can have some idea of what we are in for. 
-Open meqbroswer, press start, go to TDL then Load TDL Script and navigate to Cattery then
-calico and load calico-stefcal.py. 
-        
+<font color ="blue"> Open meqbroswer, press start, go to TDL then Load TDL Script and navigate to Cattery then
+calico and load calico-stefcal.py. On the open "TDL Compile-time Options" Load the MS file and 
+click Compile </font>. A "TDL Jobs &amp; Runtime Option" window should appear and expand the "Imaging Options" and set the following;
+<ul>
+<li> Image type or column: <font color="blue"> DATA </font>
+<li> Name of output FITS file: name this <font color="blue"> Original_field_clean.fits</font>
+ <li> Image size, in pixels: <font color="blue"> 1024 </font>
+<li> Image size, in arcmin: <font color="blue"> 180 </font>	 
+	<li> Expand the <font color="blue"> Make a clean Image </font>
+<li> Number of iterations: <font color="blue"> 3000 </font>
+<li> Leave the rest as defaults
+	<li> Click on <font color="blue"> Make a clean image </font>
+					</ul>		
+					
+		
 				</section>
 				
 				<section id="four">
 						<header class="major">
-							<h2> DD Calibration: Differential Gains</h2>
-							
-							<h3>  Imaging </h3>
+							<h2> G Only Calibration: 2GC</h2>
 						</header> 
+					
+					
+				</section>
+				
+				<section id="five">
+						<header class="major">
+							<h2> DD Calibration: Differential Gains</h2>
+						</header> 
+				</section>
 					
 </body>
     
